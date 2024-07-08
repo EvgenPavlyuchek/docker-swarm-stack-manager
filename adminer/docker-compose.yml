@@ -1,0 +1,11 @@
+services:
+  adminer:
+    image: ${IMAGES_extra_adminer}
+    hostname: adminer
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 8080:8080
+    deploy:
+      mode: replicated
+      replicas: 1
